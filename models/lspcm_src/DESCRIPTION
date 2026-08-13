@@ -1,0 +1,53 @@
+Package: lspm
+Title: Latent Shrinkage Position Model for Network Data
+Version: 1.2.0
+Authors@R: 
+    c(person(given = "Xian Yao",
+           family = "Gwee",
+           role = c("aut", "cre"),
+           email = "xian-yao.gwee@ucdconnect.ie",
+           comment = c(ORCID = "0000-0002-9555-705X")),
+    person(given = "Isobel Claire",
+           family = "Gormley",
+           role = c("aut"),
+           email = "claire.gormley@ucd.ie"),
+    person(given = "Michael",
+           family = "Fop",
+           role = c("aut"),
+           email = "michael.fop@ucd.ie"))
+Description: This package provides a latent shrinkage position  model that can 
+  indicate the number of non-zero variance dimensions. Relevant plots and 
+  diagnostic functions are also included. The latent shrinkage position model 
+  (LSPM) facilitates automatic estimation of the dimensionality of the latent 
+  space from the data by extending the latent space model using a shrinkage 
+  prior called the multiplicative truncated gamma process (MTGP). The model is 
+  built within a nonparametric Bayesian framework which allows for infinitely 
+  many dimensions. The key idea is to have the variance of the latent positions 
+  on each dimension to become increasingly small as the number of dimensions 
+  tends to infinity. With the LSPM, the need to select a model selection 
+  criterion is obviated. The LSPM also retains the ease of interpretability of 
+  the model similar to the original LPM. Furthermore, there is a natural order 
+  to the importance of the latent dimensions due to the nature of the shrinkage 
+  prior used. LSPM uses a Metropolis-within-Gibbs sampler to sample the 
+  posterior distribution. 
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Depends: R (>= 3.5.0)
+Imports: 
+  abind,
+  graphics,
+  grDevices,
+  mvtnorm,
+  sna,
+  stats,
+  truncdist,
+  vioplot,
+  Rfast,
+  MCMCpack,
+  mclust,
+  mcclust,
+  rootSolve,
+  utils,
+  seriation

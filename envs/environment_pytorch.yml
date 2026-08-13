@@ -1,0 +1,30 @@
+# Entorno único para: DEC (pt-dec), DSC-Net, VaDE, DeepDPM, SB-VAE
+# Todos comparten PyTorch moderno. SB-VAE fue reescrito en PyTorch puro
+# (ver models/sbvae/pytorch_sbvae/) en vez de usar el código original en
+# Theano (descontinuado), así que ya no hace falta un entorno legacy aparte.
+# CPU-only (sin cudatoolkit).
+#
+# Crear con:  conda env create -f environment_pytorch.yml
+# Activar con: conda activate dcs-pytorch
+
+name: dcs-pytorch
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pytorch=2.2.*
+  - torchvision=0.17.*
+  - cpuonly
+  - numpy
+  - scipy
+  - scikit-learn
+  - pandas
+  - pillow
+  - matplotlib
+  - tqdm
+  - pytorch-lightning   # requerido por VaDE (ysterin/VaDE usa pl)
+  - pip
+  - pip:
+      - munkres          # usado por varios scripts de evaluación (cluster_acc)

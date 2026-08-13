@@ -1,0 +1,26 @@
+program: train_simple.py
+method: random
+metric:
+  goal: maximize
+  name: ACC
+project:
+  AE-clustering
+parameters:
+  clustering_method:
+    value: best_of_10
+  lr:
+    value: 0.0003
+  epochs:
+    min: 50
+    max: 200
+    distribution: int_uniform
+  data_size:
+    value: null 
+  dataset:
+    value: mnist
+  batch_size:
+    value: 256
+  device:
+    value: cuda
+  k:
+    value: 10

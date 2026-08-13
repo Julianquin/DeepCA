@@ -18,6 +18,8 @@ lib/
 lib64/
 parts/
 sdist/
+papers/
+data/
 var/
 wheels/
 share/python-wheels/
@@ -216,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Documents
+*.pdf
+*.txt
+*.Rdata
+*.Rd
+*.rda
