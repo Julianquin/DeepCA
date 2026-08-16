@@ -21,7 +21,6 @@
 #   Rscript run_lspcm.R --adjacency ../../data/mi_red_adj.csv \
 #       --n_dimen 5 --G 20 --iter 50000 --burnin 5000 --thin 100 \
 #       --labels ../../data/labels_reales.csv   # opcional, solo para ARI
-
 suppressMessages(library(lspm))
 
 args <- commandArgs(trailingOnly = TRUE)
